@@ -1,0 +1,28 @@
+{
+  "name": "viemcraft",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Im-Soumya/viemcraft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Im-Soumya/viemcraft/issues"
+  },
+  "homepage": "https://github.com/Im-Soumya/viemcraft#readme",
+  "keywords": [],
+  "author": "Soumya Mukherjee",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
