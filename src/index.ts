@@ -15,13 +15,14 @@ export function getCreatePollCalldata({
   pollQuestion,
   pollDuration,
   initialStake,
+  token,
 }: GetCreatePollCalldataParams): Hex {
   return encodeFunctionData({
     abi: generateAbi(
-      'function createPoll(string memory _question,uint256 _duration,uint256 _initialStake) external (uint256)'
+      'function createPoll(string _question, uint256 _duration, uint256 _initialStake, address token) external returns (uint256)'
     ),
     functionName: 'createPoll',
-    args: [pollQuestion, pollDuration, initialStake],
+    args: [pollQuestion, pollDuration, initialStake, token],
   });
 }
 
@@ -32,7 +33,7 @@ export function getVoteCalldata({
 }: GetVoteCalldataParams): Hex {
   return encodeFunctionData({
     abi: generateAbi(
-      'function vote(uint256 _pollId,bool _vote,uint256 _amount) external'
+      'function vote(uint256 _pollId, bool _vote, uint256 _amount) external'
     ),
     functionName: 'vote',
     args: [pollId, vote, amount],

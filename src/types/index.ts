@@ -2,6 +2,7 @@ export type GetCreatePollCalldataParams = {
   pollQuestion: string;
   pollDuration: bigint;
   initialStake: bigint;
+  token: `0x${string}`;
 };
 
 export type GetVoteCalldataParams = {
